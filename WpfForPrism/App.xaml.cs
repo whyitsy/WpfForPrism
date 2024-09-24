@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfForPrism.Views;
 
 namespace WpfForPrism
 {
@@ -22,7 +23,9 @@ namespace WpfForPrism
         /// <param name="containerRegistry"></param>
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterForNavigation<UCA>("uca");
+            containerRegistry.RegisterForNavigation<UCB>("ucb");
+            containerRegistry.RegisterForNavigation<UCC>("ucc");
         }
     }
 
